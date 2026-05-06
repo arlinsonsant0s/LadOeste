@@ -294,7 +294,7 @@ i {
 }
 
 .footer-logo img{
-    width: 300px;
+    width: 200px;
 }
 
 .btn-whatsapp {
@@ -363,3 +363,7 @@ a {
   cursor: pointer;
   text-decoration: none;
 }/*# sourceMappingURL=style.css.map */
+
+.sobre{
+  width: 900px;
+}
