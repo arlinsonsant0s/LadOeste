@@ -71,7 +71,7 @@ i {
   }
   .header-logo img {
     width: 160px;
-    margin-top: 46px;
+    margin-top: 10px;
   }
   .header-button {
     display: none;
@@ -164,7 +164,7 @@ i {
   }
 }
 .about {
-  background-color: #06121e;
+  background-color: #102131;
   overflow: hidden;
   color: #FFF;
 }
@@ -283,13 +283,17 @@ i {
   justify-content: center;
   padding: 54px 0;
   gap: 24px;
-  color: #FFF;
+  color: #ffffff;
 }
 
 .footer-icons {
   display: flex;
   gap: 8px;
   color: #FFF;
+}
+
+.footer-logo img{
+    width: 300px;
 }
 
 .btn-whatsapp {
@@ -336,7 +340,7 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
-  background-color: #06121e;
+  background-color: #858686;
   cursor: url("./assets/pont.png"), auto;
 }
 
