@@ -90,7 +90,7 @@ i {
   content: "";
   display: block;
   position: absolute;
-  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("./assets/bg.jpg");
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.623), #030303), url("./assets/bg.jpg");
   left: 0;
   top: 0;
   width: 100%;
@@ -163,7 +163,7 @@ i {
   }
 }
 .about {
-  background-color: #102131;
+  background-color: #000000;
   overflow: hidden;
   color: #FFF;
   background-image: url("./assets/fundo.png");
