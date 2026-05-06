@@ -253,10 +253,12 @@ i {
 .haircut-info {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 14px;
   background-color: #FFF;
   z-index: 99;
+  text-align: center;
+  
 }
 
 .haircut-info button {
