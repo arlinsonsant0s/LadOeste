@@ -30,13 +30,10 @@ i {
 }
 
 @keyframes translateY {
-  from {
-    transform: translateY(0) scale(1);
-  }
-  to {
-    transform: translateY(-8px) scale(1.1);
-  }
+  from { transform: translateY(0) scale(1); }
+  to   { transform: translateY(-8px) scale(1.1); }
 }
+
 .header-button {
   border: 1px solid #FFF;
   padding: 8px 24px;
@@ -44,6 +41,11 @@ i {
   color: #FFF;
   background-color: transparent;
   transition: background-color 0.8s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-block;
 }
 
 .header-button:hover {
@@ -57,6 +59,7 @@ i {
   justify-content: center;
   margin-top: 14px;
 }
+
 @media screen and (max-width: 768px) {
   .header-content {
     width: 100%;
@@ -72,10 +75,9 @@ i {
     width: 160px;
     margin-top: 10px;
   }
-  .header-button {
-    display: none;
-  }
+  .header-button { display: none; }
 }
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -111,57 +113,7 @@ i {
   justify-content: center;
   padding: 14px;
 }
-.hero h1 {
-  text-align: center;
-  line-height: 150%;
-  max-width: 940px;
-  font-size: 46px;
-}
-.hero p {
-  text-align: center;
-  margin: 14px 0;
-}
 
-.button-contact {
-  padding: 14px 28px;
-  color: #FFF;
-  background-color: #d94140;
-  border: 0;
-  font-size: 18px;
-  font-weight: 600;
-  margin: 14px 0;
-}
-
-.button-contact:hover {
-  animation: scaleButton 0.8s alternate infinite;
-}
-
-@keyframes scaleButton {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.07);
-  }
-}
-@media screen and (max-width: 768px) {
-  .hero {
-    min-height: 60vh;
-  }
-  .hero h1 {
-    font-size: 34px;
-    padding: 0 14px;
-    width: 100%;
-  }
-  .hero p {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .hero h1 {
-    font-size: 24px;
-  }
-}
 .about {
   background-color: #000000;
   overflow: hidden;
@@ -176,13 +128,8 @@ i {
   gap: 14px;
   padding: 34px 14px 64px 14px;
 }
-.about-content img {
-  max-width: 570px;
-}
-
-.about-content div {
-  flex: 1;
-}
+.about-content img { max-width: 570px; }
+.about-content div { flex: 1; }
 
 .about-description h2 {
   font-size: 38px;
@@ -194,10 +141,9 @@ i {
 }
 
 @media screen and (max-width: 768px) {
-  .about-content {
-    flex-direction: column;
-  }
+  .about-content { flex-direction: column; }
 }
+
 .services {
   background-color: #FFF;
   color: #232224;
@@ -215,11 +161,9 @@ i {
   margin-bottom: 14px;
 }
 
-.services-content p {
-  line-height: 150%;
-  margin-bottom: 14px;
+.services-content h3 {
   text-align: center;
-  max-width: 780px;
+  font-size: 28px;
 }
 
 .haircuts {
@@ -238,13 +182,15 @@ i {
   border-radius: 8px;
   box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
   overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 .haircut img {
   width: 100%;
   max-width: 354px;
   transition: transform 0.2s;
 }
-
 .haircut img:hover {
   transform: scale(1.2);
   z-index: 1;
@@ -258,7 +204,6 @@ i {
   background-color: #FFF;
   z-index: 99;
   text-align: center;
-  
 }
 
 .haircut-info button {
@@ -271,13 +216,10 @@ i {
 }
 
 @media screen and (max-width: 768px) {
-  .haircuts {
-    flex-direction: column;
-  }
-  .haircut img {
-    max-width: 740px;
-  }
+  .haircuts { flex-direction: column; }
+  .haircut img { max-width: 740px; }
 }
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -289,16 +231,8 @@ i {
   background-color: #000000;
 }
 
-.footer-icons {
-  display: flex;
-  gap: 8px;
-  color: #FFF;
-}
-
-.footer-logo img{
-    width: 200px;
-    color: white;
-}
+.footer-icons { display: flex; gap: 8px; color: #FFF; }
+.footer-logo img { width: 200px; }
 
 .btn-whatsapp {
   position: fixed;
@@ -310,9 +244,7 @@ i {
   max-width: 74px;
   transition: transform 0.4s;
 }
-.btn-whatsapp img:hover {
-  transform: scale(1.1);
-}
+.btn-whatsapp img:hover { transform: scale(1.1); }
 
 .btn-whatsapp .tooltip-text {
   visibility: hidden;
@@ -335,39 +267,19 @@ i {
 }
 
 @media screen and (max-width: 768px) {
-  .btn-whatsapp img {
-    max-width: 64px;
-  }
+  .btn-whatsapp img { max-width: 64px; }
 }
+
 body {
   font-family: "Sora", sans-serif;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   background-color: #858686;
-  cursor: url("./assets/pont.png"), auto;
-  
 }
 
-button {
-  font-family: "Sora", sans-serif;
-  cursor: pointer;
-}
-
-svg {
-  width: 100%;
-}
-
-img {
-  width: 40%;
-  height: auto;
-}
-
-a {
-  cursor: pointer;
-  text-decoration: none;
-}/*# sourceMappingURL=style.css.map */
-
-.sobre{
-  width: 900px;
-}
+button { font-family: "Sora", sans-serif; cursor: pointer; }
+svg { width: 100%; }
+img { width: 40%; height: auto; }
+a { cursor: pointer; text-decoration: none; }
+.sobre { width: 900px; }

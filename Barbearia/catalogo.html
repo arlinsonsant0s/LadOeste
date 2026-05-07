@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="catalogo.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <title>Catálogo - Dev LadOeste | Streetwear</title>
+</head>
+<body class="catalog-page">
+
+  <!-- HEADER -->
+  <header class="catalog-header">
+    <nav class="header-content container">
+      <div class="header-logo" data-aos="fade-right">
+        <a href="index.html" data-testid="logo-link">
+          <img src="assets/LadOeste.svg"
+               alt="LadOeste" onerror="this.style.display='none'" />
+        </a>
+      </div>
+
+      <div class="catalog-nav" data-aos="fade-down">
+        <a href="index.html" data-testid="nav-home">Home</a>
+        <a href="#higher" data-testid="nav-higher">Higher</a>
+        <a href="#lower" data-testid="nav-lower">Lower</a>
+        <a href="#highlights" data-testid="nav-highlights">Highlights</a>
+      </div>
+
+      <div data-aos="fade-left">
+        <button class="cart-toggle-btn" data-action="open-cart" data-testid="cart-open-btn">
+          <i class="fa-solid fa-bag-shopping"></i>
+          Carrinho
+          <span class="cart-count-badge js-cart-count" data-testid="cart-count-badge">0</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="catalog-hero">
+    <h1 data-aos="fade-up">Catálogo <span>—</span> Coleção</h1>
+    <p data-aos="fade-up" data-aos-delay="150">Raw Luxury · Street Soul</p>
+  </section>
+
+  <!-- TABS -->
+  <nav class="category-tabs" data-aos="fade-up" data-aos-delay="250">
+    <a href="#higher" data-testid="tab-higher">Higher</a>
+    <a href="#lower" data-testid="tab-lower">Lower</a>
+    <a href="#highlights" data-testid="tab-highlights">Highlights</a>
+  </nav>
+
+  <!-- HIGHER -->
+  <section class="category-section" id="higher">
+    <div class="category-header" data-aos="fade-up">
+      <div class="category-header-text">
+        <small>01 — Parte de cima</small>
+        <h2>Higher<span>.</span></h2>
+      </div>
+      <div class="category-header-meta" id="meta-higher"></div>
+    </div>
+    <div class="product-grid" id="grid-higher" data-testid="grid-higher"></div>
+  </section>
+
+  <!-- LOWER -->
+  <section class="category-section" id="lower">
+    <div class="category-header" data-aos="fade-up">
+      <div class="category-header-text">
+        <small>02 — Parte de baixo</small>
+        <h2>Lower<span>.</span></h2>
+      </div>
+      <div class="category-header-meta" id="meta-lower"></div>
+    </div>
+    <div class="product-grid" id="grid-lower" data-testid="grid-lower"></div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="category-section" id="highlights">
+    <div class="category-header" data-aos="fade-up">
+      <div class="category-header-text">
+        <small>03 — Acessórios</small>
+        <h2>Highlights<span>.</span></h2>
+      </div>
+      <div class="category-header-meta" id="meta-highlights"></div>
+    </div>
+    <div class="product-grid" id="grid-highlights" data-testid="grid-highlights"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-icons">
+      <a href="#" data-testid="footer-instagram"><i class="fa-brands fa-instagram fa-2x"></i></a>
+      <a href="#" data-testid="footer-facebook"><i class="fa-brands fa-facebook fa-2x"></i></a>
+      <a href="#" data-testid="footer-tiktok"><i class="fa-brands fa-tiktok fa-2x"></i></a>
+    </div>
+    <p>© Copyright 2026 | Dev LadOeste - Todos direitos reservados.</p>
+  </footer>
+
+  <!-- WHATSAPP FLOATING -->
+  <a href="https://api.whatsapp.com/send?phone=5561992385579&text=Quero%20fazer%20um%20pedido%20hoje!"
+     class="btn-whatsapp"
+     target="_blank"
+     data-aos="zoom-in-up"
+     data-testid="whatsapp-float">
+    <img src="assets/whatssapp.svg"
+         alt="WhatsApp"
+         onerror="this.outerHTML='<i class=&quot;fa-brands fa-whatsapp&quot; style=&quot;font-size:62px;color:#25d366;&quot;></i>'" />
+    <span class="tooltip-text">Fale conosco</span>
+  </a>
+
+  <!-- ============== CART DRAWER ============== -->
+  <div class="cart-overlay" id="cart-overlay" data-action="close-cart" data-testid="cart-overlay"></div>
+
+  <aside class="cart-drawer" id="cart-drawer" data-testid="cart-drawer">
+    <div class="cart-header">
+      <h3>Seu <span>carrinho</span></h3>
+      <button class="cart-close-btn" data-action="close-cart" data-testid="cart-close-btn" aria-label="Fechar">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="cart-items" id="cart-items" data-testid="cart-items"></div>
+
+    <div class="cart-footer">
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span class="js-cart-subtotal" data-testid="cart-subtotal">R$ 0,00</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Frete</span>
+        <span>A calcular</span>
+      </div>
+      <div class="cart-summary-row total">
+        <span>Total</span>
+        <span class="js-cart-total" data-testid="cart-total">R$ 0,00</span>
+      </div>
+      <button class="checkout-btn" id="checkout-btn" data-testid="checkout-btn" disabled>
+        Finalizar compra
+      </button>
+    </div>
+  </aside>
+
+  <!-- ============== CHECKOUT MODAL ============== -->
+  <div class="modal-overlay" id="checkout-modal-overlay" data-testid="checkout-modal">
+    <div class="checkout-modal">
+      <div class="modal-header">
+        <h3>Finalizar <span>pedido</span></h3>
+        <button class="cart-close-btn" data-action="close-checkout" data-testid="checkout-close-btn" aria-label="Fechar">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="checkout-summary">
+          <div class="checkout-summary-row">
+            <span>Itens</span>
+            <span><span class="js-cart-count" data-testid="checkout-count">0</span> peça(s)</span>
+          </div>
+          <div class="checkout-summary-row">
+            <span>Subtotal</span>
+            <span class="js-cart-subtotal" data-testid="checkout-subtotal">R$ 0,00</span>
+          </div>
+          <div class="checkout-summary-row total">
+            <span>Total</span>
+            <span class="js-cart-total" data-testid="checkout-total">R$ 0,00</span>
+          </div>
+        </div>
+
+        <span class="payment-label">Escolha a forma de pagamento</span>
+
+        <div class="payment-options">
+          <button class="payment-option" data-payment="paypal" data-testid="pay-paypal">
+            <span class="payment-option-icon paypal"><i class="fa-brands fa-paypal"></i></span>
+            <span class="payment-option-body">
+              <strong>PayPal</strong>
+              <small>Pagamento internacional seguro</small>
+            </span>
+            <i class="fa-solid fa-arrow-right payment-option-arrow"></i>
+          </button>
+
+          <button class="payment-option" data-payment="stripe" data-testid="pay-stripe">
+            <span class="payment-option-icon stripe"><i class="fa-brands fa-stripe-s"></i></span>
+            <span class="payment-option-body">
+              <strong>Stripe — Cartão</strong>
+              <small>Crédito / débito · Visa, Master, Amex</small>
+            </span>
+            <i class="fa-solid fa-arrow-right payment-option-arrow"></i>
+          </button>
+
+          <button class="payment-option" data-payment="mercadopago" data-testid="pay-mercadopago">
+            <span class="payment-option-icon mercadopago"><i class="fa-solid fa-money-bill-wave"></i></span>
+            <span class="payment-option-body">
+              <strong>Mercado Pago</strong>
+              <small>Pix · cartão · boleto</small>
+            </span>
+            <i class="fa-solid fa-arrow-right payment-option-arrow"></i>
+          </button>
+
+          <button class="payment-option" data-payment="whatsapp" data-testid="pay-whatsapp">
+            <span class="payment-option-icon whatsapp"><i class="fa-brands fa-whatsapp"></i></span>
+            <span class="payment-option-body">
+              <strong>Finalizar via WhatsApp</strong>
+              <small>Combinar pagamento direto com a loja</small>
+            </span>
+            <i class="fa-solid fa-arrow-right payment-option-arrow"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <small>Pagamento 100% seguro · Suas informações são privadas</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast" data-testid="toast">
+    <i class="fa-solid fa-check-circle"></i>
+    <span>Item adicionado</span>
+  </div>
+
+  <!-- React mount (kept hidden so CRA dev server doesn't break) -->
+  <div id="root" style="display:none"></div>
+
+  <script src="cart.js"></script>
+  <script src="catalog-data.js"></script>
+  <script>
+    if (typeof AOS !== "undefined") AOS.init({ duration: 700, once: true });
+  </script>
+</body>
+</html>
