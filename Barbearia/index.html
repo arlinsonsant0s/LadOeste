@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="style.css" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 
   <title>Dev LadOeste - Sua loja StreetWear!</title>
 </head>
@@ -21,30 +23,25 @@
   <!-- HEADER -->
   <div class="bg-home">
     <header>
-
       <nav class="header-content container">
-        <div class="header-icons" data-aos="fade-down">
-         
-        </div>
+        <div class="header-icons" data-aos="fade-down"></div>
 
         <div class="header-logo" data-aos="fade-up" data-aos-delay="300">
-          <img 
+          <img
             data-aos="flip-up"
             data-aos-delay="300"
             data-aos-duration="1500"
-            src="assets/LadOeste.svg" 
+            src="assets/LadOeste.svg"
             alt="Logo da LadOeste"
+            onerror="this.style.display='none'"
           />
         </div>
 
         <div data-aos="fade-down">
-          
+          <a href="catalogo.html" class="header-button" data-testid="home-catalog-link">Catálogo</a>
         </div>
-
       </nav>
-      
     </header>
-
   </div>
 
   <!-- ABOUT -->
@@ -52,110 +49,96 @@
     <div class="container about-content">
       <div data-aos="zoom-in" data-aos-delay="100">
         <img class="sobre"
-          src="assets/sobre.svg" 
+          src="assets/sobre.svg"
           alt="Imagem sobre a loja"
+          onerror="this.style.display='none'"
         />
       </div>
 
-      <div 
-        class="about-description"
-        data-aos="zoom-out-left" data-aos-delay="250"
-      >
+      <div class="about-description" data-aos="zoom-out-left" data-aos-delay="250">
         <h2>About Us</h2>
         <p>LadOeste is the intersection between contemporary luxury and street life. More than a brand, we are a style curator for those who demand pieces that carry history, impeccable tailoring, and the raw attitude of the urban scene. Here, streetwear isn't a trend, it's our brand DNA.</p>
-      
       </div>
-
     </div>
   </section>
 
   <!-- SERVICES -->
-
   <section class="services">
-
     <div class="services-content container">
       <h3>LadOeste: Raw Luxury, Street Soul.</h3><br><br>
-      
     </div>
 
     <section class="haircuts">
-
-      <div class="haircut" data-aos="fade-up" data-aos-delay="150">
+      <a class="haircut" href="catalogo.html#higher" data-aos="fade-up" data-aos-delay="150" data-testid="home-card-higher">
         <img
           src="assets/cima.png"
           alt="Parte de Cima"
+          onerror="this.style.display='none'"
         />
-        <div class="haircut-info">
-          <strong>Higher</strong>
-        </div>
-      </div>
+        <div class="haircut-info"><strong>Higher</strong></div>
+      </a>
 
-      <div class="haircut" data-aos="fade-up" data-aos-delay="250">
+      <a class="haircut" href="catalogo.html#lower" data-aos="fade-up" data-aos-delay="250" data-testid="home-card-lower">
         <img
           src="assets/baixo.png"
           alt="Parte de Baixo"
+          onerror="this.style.display='none'"
         />
-        <div class="haircut-info">
-          <strong>Lower</strong>
-        </div>
-      </div>
+        <div class="haircut-info"><strong>Lower</strong></div>
+      </a>
 
-      <div class="haircut" data-aos="fade-up" data-aos-delay="400">
+      <a class="haircut" href="catalogo.html#highlights" data-aos="fade-up" data-aos-delay="400" data-testid="home-card-highlights">
         <img
           src="assets/acessorios.png"
           alt="Acessórios"
+          onerror="this.style.display='none'"
         />
-        <div class="haircut-info">
-          <strong>Highlights</strong>
-
-        </div>
-      </div>
-
+        <div class="haircut-info"><strong>Highlights</strong></div>
+      </a>
     </section>
-
   </section>
 
-  <!-- FOOTER -->
-
+  <!-- FOOTER LABEL -->
   <div class="services">
     <h2>Come and meet us</h2>
   </div>
 
- <iframe 
- width="100%"
- src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57482.22371087891!2d-80.26659298183424!3d25.7824854864438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2zTWlhbWksIEZsw7NyaWRhLCBFVUE!5e0!3m2!1spt-BR!2sbr!4v1778173539237!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe
+    width="100%"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57482.22371087891!2d-80.26659298183424!3d25.7824854864438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2zTWlhbWksIEZsw7NyaWRhLCBFVUE!5e0!3m2!1spt-BR!2sbr!4v1778173539237!5m2!1spt-BR!2sbr"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+
   <footer class="footer">
     <div class="footer-icons">
-      <a href="#">
-        <i class="fa-brands fa-instagram fa-2x"></i>   
-       </a>
-       <a href="#">
-         <i class="fa-brands fa-facebook fa-2x"></i>   
-       </a>
-       <a href="#">
-         <i class="fa-brands fa-tiktok fa-2x"></i>   
-       </a>
+      <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+      <a href="#"><i class="fa-brands fa-tiktok fa-2x"></i></a>
     </div>
-    <div class="footer-logo">
-     
-    </div>
-
+    <div class="footer-logo"></div>
     <p>© Copyright 2026 | Dev LadOeste - Todos direitos reservados.</p>
   </footer>
 
-  <!-- Button Whatsapp -->
-
-  <a 
-   href="https://api.whatsapp.com/send?phone=5561992385579&text=Quero%20fazer%20um%20pedido%20hoje!"
-   class="btn-whatsapp"
-   target="_blank"
-   data-aos="zoom-in-up" data-aos-delay="400"
-  >
-    <img src="assets/whatssapp.svg" alt="Botao whatsapp" />
+  <!-- WhatsApp -->
+  <a href="https://api.whatsapp.com/send?phone=5561992385579&text=Quero%20fazer%20um%20pedido%20hoje!"
+     class="btn-whatsapp"
+     target="_blank"
+     data-aos="zoom-in-up" data-aos-delay="400">
+    <img src="assets/whatssapp.svg"
+         alt="Botao whatsapp"
+         onerror="this.outerHTML='<i class=&quot;fa-brands fa-whatsapp&quot; style=&quot;font-size:62px;color:#25d366;&quot;></i>'" />
     <span class="tooltip-text">Contact us</span>
   </a>
 
+  <!-- React mount target (hidden) - mantido para compatibilidade com dev server -->
+  <div id="root" style="display:none"></div>
 
-  <script src="script.js"></script>
+  <script>
+    if (typeof AOS !== "undefined") AOS.init();
+  </script>
 </body>
 </html>
