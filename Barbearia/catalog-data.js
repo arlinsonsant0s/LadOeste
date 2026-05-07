@@ -15,8 +15,8 @@ const CATALOG = {
     subtitle: "Parte de cima",
     description: "Camisetas, moletons, jaquetas e tops",
     items: [
-      { id: "h1", name: "", image: "assets/peita01.png", price: 0,    tag: "Novo" },
-      { id: "h2", name: "", image: "assets/peita02.png", price: 0,    tag: "" },
+      { id: "h1", name: "Camisa Mouth Limited Edition", image: "assets/peita01.png", price: 197,    tag: "Novo" },
+      { id: "h2", name: "Camisa NY Limited", image: "assets/peita02.png", price: 149,    tag: "" },
       { id: "h3", name: "", image: "assets/peita03.png", price: 0,    tag: "" },
       { id: "h4", name: "", image: "assets/peita04.png", price: 0,    tag: "" },
       { id: "h5", name: "", image: "assets/", price: 0,    tag: "" },
