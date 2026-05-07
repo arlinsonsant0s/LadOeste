@@ -47,7 +47,7 @@ const CATALOG = {
     subtitle: "Acessórios",
     description: "Bonés, bolsas, correntes e detalhes",
     items: [
-      { id: "a1", name: "", image: "", price: 0,    tag: "Novo" },
+      { id: "a1", name: "", image: "assets/bone_1", price: 0,    tag: "Novo" },
       { id: "a2", name: "", image: "", price: 0,    tag: "" },
       { id: "a3", name: "", image: "", price: 0,    tag: "" },
       { id: "a4", name: "", image: "", price: 0,    tag: "" },
@@ -89,7 +89,6 @@ function renderCatalog() {
               ? `<img src="${p.image}" alt="${p.name || section.title}" />`
               : `<div class="product-image-placeholder">
                    <i class="fa-solid fa-image"></i>
-                   Adicionar imagem
                  </div>`}
           </div>
 
